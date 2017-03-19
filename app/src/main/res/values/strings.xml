@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">multichat</string>
+
+    <string name="toolbar_title">Chat</string>
+    <string name="fragment_chat_disconnect">You were disconnected</string>
+    <string name="fragment_login_connection_failed">Connection failed</string>
+    <string name="fragment_login_bad_username">Not valid input</string>
+    <string name="fragment_login_server_offline">Server is currently offline</string>
+    <string name="fragment_chat_file_download_message">Downloading...</string>
+    <string name="fragment_chat_file_upload_message">Uploading...</string>
+    <string name="fragment_chat_message_not_valid">Message can\'t be empty</string>
+    <string name="fragment_chat_file_upload_fail">Failed to upload</string>
+    <string name="fragment_chat_file_download_fail">Failed to download</string>
+    <string name="fragment_chat_file_download_success">File successfully downloaded.</string>
+    <string name="fragment_chat_file_upload_success">File successfully uploaded.</string>
+    <string name="fragment_login_bad_response">Bad response from server</string>
+</resources>

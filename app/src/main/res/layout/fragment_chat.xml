@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ua.com.mitk.multichat.view.ChatFragment">
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btnSend"
+        android:textColor="@color/secondaryText"
+        android:ems="10"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:inputType="textPersonName"
+        android:hint="Your message"
+        android:layout_toRightOf="@+id/ibtnAttach"
+        android:layout_toStartOf="@+id/btnSend"
+        android:layout_toEndOf="@+id/ibtnAttach" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etMessage"
+        android:text="Send"
+        android:textAllCaps="false" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lvMessages"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/etMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        app:srcCompat="@android:drawable/ic_menu_upload"
+        android:layout_below="@+id/lvMessages"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ibtnAttach" />
+</RelativeLayout>
