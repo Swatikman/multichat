@@ -19,7 +19,7 @@ import java.io.File;
 
 public class Storage {
 
-    private final static String STORAGE_URL = "gs://android-multichat.appspot.com" ;
+    private final static String STORAGE_URL = "gs://android-multichat.appspot.com";
     private UploadTask mUploadTask;
     private FileDownloadTask mDownloadTask;
 
@@ -44,27 +44,40 @@ public class Storage {
     }
 
     public void addDownloadOnProgressListener(OnProgressListener<FileDownloadTask.TaskSnapshot> onProgressListener) {
-        mDownloadTask.addOnProgressListener(onProgressListener);
+        if (mDownloadTask != null) {
+            mDownloadTask.addOnProgressListener(onProgressListener);
+        }
     }
 
     public void addUploadOnProgressListener(OnProgressListener<UploadTask.TaskSnapshot> onProgressListener) {
-        mUploadTask.addOnProgressListener(onProgressListener);
+        if (mUploadTask != null) {
+            mUploadTask.addOnProgressListener(onProgressListener);
+
+        }
     }
 
     public void addDownloadOnFailureListener(OnFailureListener onFailureListener) {
-        mDownloadTask.addOnFailureListener(onFailureListener);
+        if (mDownloadTask != null) {
+            mDownloadTask.addOnFailureListener(onFailureListener);
+        }
     }
 
     public void addUploadOnFailureListener(OnFailureListener onFailureListener) {
-        mUploadTask.addOnFailureListener(onFailureListener);
+        if (mUploadTask != null) {
+            mUploadTask.addOnFailureListener(onFailureListener);
+        }
     }
 
     public void addDownloadOnSuccessListener(OnSuccessListener<FileDownloadTask.TaskSnapshot> onSuccessListener) {
-        mDownloadTask.addOnSuccessListener(onSuccessListener);
+        if (mDownloadTask != null) {
+            mDownloadTask.addOnSuccessListener(onSuccessListener);
+        }
     }
 
     public void addUploadOnSuccessListener(OnSuccessListener<UploadTask.TaskSnapshot> onSuccessListener) {
-        mUploadTask.addOnSuccessListener(onSuccessListener);
+        if (mUploadTask != null) {
+            mUploadTask.addOnSuccessListener(onSuccessListener);
+        }
     }
 
     public void cancel() {
